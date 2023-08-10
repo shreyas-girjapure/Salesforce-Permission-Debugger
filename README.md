@@ -12,7 +12,7 @@ For an instance ,
 There comes a day when you are debugging where the user is getting permission from. 
 1. is it from profile ?
 1. is it from permission set 1 ?
-1. is it from permission set 99 ? [world want reusable permission sets so not even exagerating on number 99] ?
+1. is it from permission set 99 ? [world want reusable permission sets so not even exaggeration on number 99] ?
 1. is it from owd / someone manually provided sharing access ?
 1. is it MAGIC ? 
 you wont know unless you waste your time checking all of the above.
