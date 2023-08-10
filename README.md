@@ -1,5 +1,7 @@
 # Salesforce-Permission-Debugger
-Hello world , instead of finishing old incomplete projects, Here is another new repository which i will be TRYING to manage. At this point i have no shame left.
+Hello world !!, Instead of finishing old incomplete projects like a good boi. 
+Here is ANOTHER new repository which I will now be committing to [at least for 2 days i hope 😑]. 
+At this point I have no shame left anyway! Please go through Readme and Questions file to contribute. See you maybe on another repo 👋.
 
 ### Problem Statement OR Why this new repo ?
 You are a very awesome developer , Creator and manager of lots and lots of awesome and super complex feature. 
