@@ -86,11 +86,13 @@
 1. Why not use `Schema` to get accessibility and other level of accesses ?
 
     `Schema` definitions are only provided in content of running user. Though its a foul proof way of providing permission and access related information. This implementation focuses on ability to provide any user as an input.
-      
+
 1. References
 
     1. http://www.gavan.in/2021/09/sharing-access-to-profile-or-permission.html
     1. [Tooling Api Sobjects](https://developer.salesforce.com/docs/atlas.en-us.api_tooling.meta/api_tooling/reference_objects_list.htm)
+    1. [Dependency Tree Similar implementation](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FeF99UAF)
+    1. [Permatrix Similar implementation ](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000HJDp4UAH&tab=d)
 
 
 1. OWD and Object Setting table 
