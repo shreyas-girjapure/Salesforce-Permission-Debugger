@@ -93,6 +93,8 @@
     1. [Tooling Api Sobjects](https://developer.salesforce.com/docs/atlas.en-us.api_tooling.meta/api_tooling/reference_objects_list.htm)
     1. [Dependency Tree Similar implementation](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000FeF99UAF)
     1. [Permatrix Similar implementation ](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000HJDp4UAH&tab=d)
+    1. [Tooling API from apex](https://medium.com/dyno-dev/calling-tooling-api-from-apex-1913933284da)
+    1. [Tooling API from LWC](https://salesforcecodex.com/salesforce/call-tooling-api-from-lightning-web-component/)
 
 
 1. OWD and Object Setting table 
