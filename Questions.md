@@ -31,46 +31,67 @@
         1. permissionIds `0PS2x000001bM3VGAU`
         1. permissionIds `0PS2x000001bM3aGAE`
         1. profile id `00e2x000000q8cFAAQ`
+
+        1. Durable id for name => AccessCheck `01I2x000000KmQg.Name`
+        1. Durable id for rev => Account `Account.AnnualRevenue`
   
 
 1. Get all objects of an org
     
+    Use this in tooling api mode to get all the fields
+ 
     `select id ,QualifiedApiName from EntityDefinition`
 
 1. Get all fields of objects 
+    
+    Use this in tooling api mode to get all the fields
+    
     `select id ,DataType, DeveloperName, DurableId, EntityDefinition.QualifiedApiName,  ReferenceTo, RelationshipName from FieldDefinition where EntityDefinition.QualifiedApiName In ('AccessCheck__c','Account')`
 
 1. Get all permissions and Profile for a user
+
+    `PermissionSetAssignment`
+    Helps identifying user and permission set relation , also provides profile info
 
     `select id ,PermissionSetId ,PermissionSet.ProfileId ,PermissionSet.IsOwnedByProfile,PermissionSet.Profile.name  from PermissionSetAssignment  where AssigneeId = '0052x0000057gF8AAI'`  
 
 1. Get all object permissions for permSets and Profile
 
+    `ObjectPermissions` Helps providing profile and permission set level access for the objects , use `parent.profile.Name` to get profile info
+
     `select id ,SobjectType, ParentId, Parent.ProfileId,  Parent.Profile.Name,Parent.IsOwnedByProfile,  PermissionsRead, PermissionsCreate, PermissionsEdit, PermissionsDelete from ObjectPermissions where ParentId in ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE')`
 
 1. Get all fieldPermissions for permSets and profile
+    
+    This provides only entries which are mapped to permSet or profile. Not all entries are there. Example if field is not provided access. It wont even display in query rows.
 
     `select id,SobjectType, PermissionsRead, PermissionsEdit, Parent.IsOwnedByProfile,Parent.Profile.Name ,Field  from FieldPermissions where ParentId In ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE') `
 
 
 1. `UserEntityAccess` ?
 
-    It is still not known how this object provides values , object and userid's combination should return access defined. but results are very inconsistent. Not useful for project's work
+    This has row limits
 
-1. `ObjectPermission`
+    `select id ,User.Username,  EntityDefinition.QualifiedApiName, IsReadable, IsEditable, IsDeletable, IsUpdatable, from UserEntityAccess where UserId  = '0052x0000057gF8AAI' limit 2000`
 
-    Helps providing profile and permission set level access for the objects , use `parent.profile.Name` to get profile info
+1. `UserFieldAccess` ?
+    
+    Enforces durable ids to be involved durable id need to have userid at the end. Which is inefficient .
 
 1. `UserRecordAccess` ?
 
     For given user and record id it can let us know following access available.   
     `select  RecordId  , HasAllAccess, HasDeleteAccess, HasEditAccess, HasReadAccess,HasTransferAccess,MaxAccessLevel   from UserRecordAccess where RecordId IN ( 'a032x00000S7Zf4AAF','a032x00000S7ZfEAAV') and UserId = '0052x000002fJUZAA2' `
 
-1. `PermissionSetAssignment`
-Helps identifying user and permission set relation , also provides profile info
+1. Why not use `Schema` to get accessibility and other level of accesses ?
 
-1. Refs
-http://www.gavan.in/2021/09/sharing-access-to-profile-or-permission.html
+    `Schema` definitions are only provided in content of running user. Though its a foul proof way of providing permission and access related information. This implementation focuses on ability to provide any user as an input.
+      
+1. References
+
+    1. http://www.gavan.in/2021/09/sharing-access-to-profile-or-permission.html
+    1. [Tooling Api Sobjects](https://developer.salesforce.com/docs/atlas.en-us.api_tooling.meta/api_tooling/reference_objects_list.htm)
+
 
 1. OWD and Object Setting table 
 
