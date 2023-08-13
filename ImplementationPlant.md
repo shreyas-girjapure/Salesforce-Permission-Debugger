@@ -1,12 +1,12 @@
 ## Backend
 Core currently is based on single user and their profiles and permissions for object and setup level security.
 
-For record level security currently only owd and sharerows should suffice.
+For record level security currently only owd and share rows should suffice.
 
 
 ### Object and Setup Level Security
 
-We will be listing `pure functions/methods/apis` for making system decoulpled and easy to scale. 
+We will be listing `pure functions/methods/apis` for making system decoupled and easy to scale. 
 
 #### Flow
 1. Once we get `User` , we will grab its `profile` and related `permissionSet`s using `PermissionSetAssignment`

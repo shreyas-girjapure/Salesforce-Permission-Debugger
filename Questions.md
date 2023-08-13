@@ -16,7 +16,7 @@
 
     Generally Object is said to be `entity` in tooling api's terms. So limits and other related stuff is stored in entity named objects.
 
-    `entityparticle` does not provide much informative info for deeper level implementions , can be ignored and instead use `fiedDefinition`
+    `entityparticle` does not provide much informative info for deeper level implementations , can be ignored and instead use `fiedDefinition`
 1. How to get field level info ?
 
     `FieldDefinition` object provides info related to field and its metadata . Has few important relationships like `UserEntityAccess` , `EntityDefinition`
@@ -40,7 +40,7 @@
 1. Get all fields of objects 
     `select id ,DataType, DeveloperName, DurableId, EntityDefinition.QualifiedApiName,  ReferenceTo, RelationshipName from FieldDefinition where EntityDefinition.QualifiedApiName In ('AccessCheck__c','Account')`
 
-1. Get all permissions and Profil for a user
+1. Get all permissions and Profile for a user
 
     `select id ,PermissionSetId ,PermissionSet.ProfileId ,PermissionSet.IsOwnedByProfile,PermissionSet.Profile.name  from PermissionSetAssignment  where AssigneeId = '0052x0000057gF8AAI'`  
 
@@ -55,7 +55,7 @@
 
 1. `UserEntityAccess` ?
 
-    It is still not known how this object provides values , object and userid's combination should return access defined. but results are very inconsistent. Not useful for projet's work
+    It is still not known how this object provides values , object and userid's combination should return access defined. but results are very inconsistent. Not useful for project's work
 
 1. `ObjectPermission`
 
@@ -63,7 +63,7 @@
 
 1. `UserRecordAccess` ?
 
-    For given user and record id it can let us know following access availables.   
+    For given user and record id it can let us know following access available.   
     `select  RecordId  , HasAllAccess, HasDeleteAccess, HasEditAccess, HasReadAccess,HasTransferAccess,MaxAccessLevel   from UserRecordAccess where RecordId IN ( 'a032x00000S7Zf4AAF','a032x00000S7ZfEAAV') and UserId = '0052x000002fJUZAA2' `
 
 1. `PermissionSetAssignment`
