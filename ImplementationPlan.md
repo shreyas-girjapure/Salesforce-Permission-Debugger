@@ -32,3 +32,7 @@ There are cool features like
 UI and UX is what could provide MOAT to current implementation.
 
 rather than focusing on complex components , data table and filtering should be enough to get overview of permission analysis.
+
+Here is mockup 
+
+![Mockup Image](MockupDraft-One.png)
