@@ -105,6 +105,7 @@
     1. [Permatrix Similar implementation ](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000HJDp4UAH&tab=d)
     1. [Tooling API from apex](https://medium.com/dyno-dev/calling-tooling-api-from-apex-1913933284da)
     1. [Tooling API from LWC](https://salesforcecodex.com/salesforce/call-tooling-api-from-lightning-web-component/)
+    1. [Row Access Architecture](https://developer.salesforce.com/docs/atlas.en-us.salesforce_record_access_under_the_hood.meta/salesforce_record_access_under_the_hood/uth_entity.htm)
 
 
 1. OWD and Object Setting table 
