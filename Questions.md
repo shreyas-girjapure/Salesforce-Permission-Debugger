@@ -8,7 +8,7 @@
      
 1. How get share record instances of the user per object ?
 
-1. How to query object's Related info ?
+1. How to query object Related info ?
 
     There exists a `EntityDefinition` object which provides basic details and its related objects.
 
@@ -17,6 +17,7 @@
     Generally Object is said to be `entity` in tooling api's terms. So limits and other related stuff is stored in entity named objects.
 
     `entityparticle` does not provide much informative info for deeper level implementations , can be ignored and instead use `fiedDefinition`
+
 1. How to get field level info ?
 
     `FieldDefinition` object provides info related to field and its metadata . Has few important relationships like `UserEntityAccess` , `EntityDefinition`
@@ -38,15 +39,24 @@
 
 1. Get all objects of an org
     
-    Use this in tooling api mode to get all the fields
+    Use this in tooling api mode to get all the objects
  
     `select id ,QualifiedApiName from EntityDefinition`
+
+    Or 
+    
+    Get all objects from describe schema
 
 1. Get all fields of objects 
     
     Use this in tooling api mode to get all the fields
     
     `select id ,DataType, DeveloperName, DurableId, EntityDefinition.QualifiedApiName,  ReferenceTo, RelationshipName from FieldDefinition where EntityDefinition.QualifiedApiName In ('AccessCheck__c','Account')`
+    
+    Or 
+    
+    Get all fields from describe schema
+
 
 1. Get all permissions and Profile for a user
 
