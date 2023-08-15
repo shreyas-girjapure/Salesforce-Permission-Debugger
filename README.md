@@ -76,8 +76,8 @@ rather than focusing on complex components , data table and filtering should be 
 
 #### Idea / Mockup
 
-![Mockup Image](MockupDraft-Two.png)
-![Smart Filter ](filterDescription.png)
+![Mockup Image](ProjectStaticResources/MockupDraft-Two.png)
+![Smart Filter ](ProjectStaticResources/filterDescription.png)
 #### UX
 
 1. Initial load
