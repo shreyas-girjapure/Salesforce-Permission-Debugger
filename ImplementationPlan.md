@@ -20,6 +20,7 @@ We will be listing `pure functions/methods/apis` for making system decoupled and
 
 ## Front End
 
+#### Market Comparison and MOAT
 Upon looking into market place available apps , found that apps focus on lots of things in a single app.
 
 We want app which only focuses on user , its permissions and how they got it.
@@ -33,6 +34,43 @@ UI and UX is what could provide MOAT to current implementation.
 
 rather than focusing on complex components , data table and filtering should be enough to get overview of permission analysis.
 
-Here is mockup 
+#### General Principles 
+1. Target Audience for this tool is `Developers` and  `Admins`.
+1. Data dumping to client side will always be preferred way of handling rows of data.
+1. In case where there are query limitations we will be using client side pagination to fetch more rows.
+1. Idea is to present all data and user will decide what to look for. 
+1. Datatable searches will be looping over all the columns of that table.
+1. UI Shall be kept as minimal as possible.
+1. Datatable to have only 10 rows per section
+1. Hyper links are expected where data can be sensibly linked.
+1. Accordion sections will be kept visible once user is selected. Even if there are no rows or data to be displayed. Sections will be kept visible. 
+1. All front end components will be of lwc
 
-![Mockup Image](MockupDraft-One.png)
+#### Idea / Mockup
+
+![Mockup Image](MockupDraft-Two.png)
+![Smart Filter ](filterDescription.png)
+#### UX
+
+1. Initial load
+    1. On initial load , No rows should be displayed and user should be prompted to search for user
+    1. all the other items should either be hidden / disabled or have filler/placeholder text inside.
+1. User Search
+    1. Provides list of all users.
+    1. Upon selection following should happen
+        1. Object analysis to be displayed with 10 rows.
+        1. Record Search to be enabled
+1. Record Search [Still not clear]
+    1. Main idea is to show row level access of the user 
+    1. and a button which provides deeeper dive of 
+        1. Share Records
+        1. OWD
+        1. View All
+        1. Modify All
+        1. Descriptive text of possibilities
+1. Analysis Tables
+    1. Table should be displayed along with filters
+    1. Smart filter like SF provides should be implemented to filter over columns
+    1. Load More / Next
+    1. Previous buttons to be provided
+    1. Export to CSV Feature to be implemented
