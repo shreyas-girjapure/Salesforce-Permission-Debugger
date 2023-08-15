@@ -62,7 +62,7 @@ rather than focusing on complex components , data table and filtering should be 
         1. Record Search to be enabled
 1. Record Search [Still not clear]
     1. Main idea is to show row level access of the user 
-    1. and a button which provides deeeper dive of 
+    1. and a button which provides deeper dive of 
         1. Share Records
         1. OWD
         1. View All
