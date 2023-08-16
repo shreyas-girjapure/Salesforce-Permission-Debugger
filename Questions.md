@@ -69,13 +69,13 @@
 
     `ObjectPermissions` Helps providing profile and permission set level access for the objects , use `parent.profile.Name` to get profile info
 
-    `select id ,SobjectType, ParentId, Parent.ProfileId,  Parent.Profile.Name,Parent.IsOwnedByProfile,  PermissionsRead, PermissionsCreate, PermissionsEdit, PermissionsDelete from ObjectPermissions where ParentId in ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE')`
+    `select id ,SobjectType, ParentId, Parent.ProfileId,Parent.Name,  Parent.Profile.Name,Parent.IsOwnedByProfile,  PermissionsRead, PermissionsCreate, PermissionsEdit, PermissionsDelete from ObjectPermissions where ParentId in ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE')`
 
 1. Get all fieldPermissions for permSets and profile
     
     This provides only entries which are mapped to permSet or profile. Not all entries are there. Example if field is not provided access. It wont even display in query rows.
 
-    `select id,SobjectType, PermissionsRead, PermissionsEdit, Parent.IsOwnedByProfile,Parent.Profile.Name ,Field  from FieldPermissions where ParentId In ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE') `
+    `select id,SobjectType, Field,PermissionsRead, PermissionsEdit, Parent.IsOwnedByProfile,Parent.Profile.Name ,Parent.name  from FieldPermissions where ParentId In ('0PS2x000001bM3VGAU','0PS2x000001bM3aGAE')`
 
 
 1. `UserEntityAccess` ?
